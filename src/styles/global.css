@@ -20,12 +20,25 @@ h1 {
     font-size: 2.5rem;
 }
 
+.hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #ff9776;
+}
+
 /* nav styles */
 .nav-links {
+    display: none;
     width: 100%;
     top: 5rem;
     left: 48px;
-    background-color: #ff9776;
     margin: 0;
 }
   
@@ -45,7 +58,7 @@ h1 {
 }
   
 .expanded {
-    display: unset;
+    display: block;
 }
   
 @media screen and (min-width: 636px) {
@@ -61,4 +74,14 @@ h1 {
         display: inline-block;
         padding: 15px 20px;
     }
+
+    .hamburger {
+        display: none;
+    }
 }
+
+a {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
