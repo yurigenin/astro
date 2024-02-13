@@ -1,12 +1,15 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import Tags from '../components/Tags.astro';
 
-const {frontmatter: {title, description, author, pubDate, image: {url, alt}}} = Astro.props;
+const {frontmatter: {title, description, author, pubDate, tags, image: {url, alt}}} = Astro.props;
 ---
+
 <BaseLayout pageTitle={title}>
     <img src={url} width="175" height="75" alt={alt} style="background-color: green" />
     <p>Written by {author}</p>
     <p>Published on: {new Date(pubDate).toLocaleDateString()}</p>
     <h2>{description}</h2>
+    <Tags tags={tags} />
     <slot />
 </BaseLayout>

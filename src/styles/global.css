@@ -85,3 +85,18 @@ a {
     color: dodgerblue;
 }
 
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  a.tag {
+    color: #00539F;
+    margin: 0.25em 0.50em 0.25em 0;
+    border: dotted 1px #a1a1a1;
+    border-radius: .5em;
+    padding: .5em 1em;
+    font-size: 1.15em;
+    background-color: #F8FCFD;
+  }
+
