@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Tags from '../../components/Tags.astro';
+import {getCollection} from "astro:content";
 
-const allPosts = await Astro.glob('../posts/post-*.md');
+const allPosts = await getCollection("posts");
 
-const tags = [...new Set(allPosts.map(({frontmatter: {tags}}) => tags).flat())];
+const tags = [...new Set(allPosts.map(({data: {tags}}) => tags).flat())];
 
 const pageTitle = "Tags";
 ---
