@@ -12,7 +12,7 @@ export const GET = async ({site}) => {
       title,
       pubDate,
       description,
-      link: `/posts/${post}`,
+      link: `/posts/${slug}`,
     })),
     customData: `<language>en-us</language>`,
   });
